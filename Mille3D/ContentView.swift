@@ -9,44 +9,15 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
-struct ContentView: View {
-    @State private var isPresented = false
-    
+struct ContentView: View {    
     var body: some View {
         TabView {
-            NavigationStack(root: {
-                Text("Summary")
-                    .navigationTitle("Dashboard")
-                    .ornament(attachmentAnchor: .scene(alignment: .top)) {
-                        HStack {
-                            Button {
-                                //
-                                isPresented.toggle()
-                            } label: {
-                                Image(systemName: "tshirt")
-                            }
-                            
-                            Button {
-                                //
-                            } label: {
-                                Image(systemName: "shoe.2")
-                            }
-                        }
-                    }
-                    .sheet(isPresented: $isPresented, content: {
-                        VStack {
-                            Text("Clothes Sales")
-                            ChartLayoutView()
-                                .padding()
-                        }
-                        .padding()
-                    })
-            })
+            SummaryView()
                 .tabItem {
                     Label("Summary", systemImage: "rectangle.3.group")
                 }
             
-            Text("Sales")
+            SalesView()
                 .tabItem {
                     Label("Sales", systemImage: "yensign.circle")
                 }

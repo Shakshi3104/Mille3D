@@ -13,6 +13,8 @@
 		CE148A022A49AA470029BF78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE148A012A49AA470029BF78 /* Assets.xcassets */; };
 		CE148A052A49AA470029BF78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE148A042A49AA470029BF78 /* Preview Assets.xcassets */; };
 		CE148A0C2A49B2F10029BF78 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE148A0B2A49B2F10029BF78 /* BarChartView.swift */; };
+		CE148A0E2A4AF1060029BF78 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE148A0D2A4AF1060029BF78 /* SummaryView.swift */; };
+		CE148A102A4AFF0C0029BF78 /* SalesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE148A0F2A4AFF0C0029BF78 /* SalesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		CE148A012A49AA470029BF78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE148A042A49AA470029BF78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE148A0B2A49B2F10029BF78 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
+		CE148A0D2A4AF1060029BF78 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		CE148A0F2A4AFF0C0029BF78 /* SalesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 			children = (
 				CE1489FD2A49AA460029BF78 /* Mille3DApp.swift */,
 				CE1489FF2A49AA460029BF78 /* ContentView.swift */,
+				CE148A0D2A4AF1060029BF78 /* SummaryView.swift */,
+				CE148A0F2A4AFF0C0029BF78 /* SalesView.swift */,
 				CE148A0B2A49B2F10029BF78 /* BarChartView.swift */,
 				CE148A012A49AA470029BF78 /* Assets.xcassets */,
 				CE148A032A49AA470029BF78 /* Preview Content */,
@@ -156,7 +162,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE148A002A49AA460029BF78 /* ContentView.swift in Sources */,
+				CE148A0E2A4AF1060029BF78 /* SummaryView.swift in Sources */,
 				CE1489FE2A49AA460029BF78 /* Mille3DApp.swift in Sources */,
+				CE148A102A4AFF0C0029BF78 /* SalesView.swift in Sources */,
 				CE148A0C2A49B2F10029BF78 /* BarChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
