@@ -10,21 +10,51 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
+    @State private var isPresented = false
+    
     var body: some View {
-        NavigationSplitView {
-            List {
-                Text("Item")
-            }
-            .navigationTitle("Sidebar")
-        } detail: {
-            VStack {
-                Model3D(named: "Scene", bundle: realityKitContentBundle)
-                    .padding(.bottom, 50)
-
-                Text("Hello, world!")
-            }
-            .navigationTitle("Content")
-            .padding()
+        TabView {
+            NavigationStack(root: {
+                Text("Summary")
+                    .navigationTitle("Dashboard")
+                    .ornament(attachmentAnchor: .scene(alignment: .top)) {
+                        HStack {
+                            Button {
+                                //
+                                isPresented.toggle()
+                            } label: {
+                                Image(systemName: "tshirt")
+                            }
+                            
+                            Button {
+                                //
+                            } label: {
+                                Image(systemName: "shoe.2")
+                            }
+                        }
+                    }
+                    .sheet(isPresented: $isPresented, content: {
+                        VStack {
+                            Text("Clothes Sales")
+                            ChartLayoutView()
+                                .padding()
+                        }
+                        .padding()
+                    })
+            })
+                .tabItem {
+                    Label("Summary", systemImage: "rectangle.3.group")
+                }
+            
+            Text("Sales")
+                .tabItem {
+                    Label("Sales", systemImage: "yensign.circle")
+                }
+            
+            Text("Orders")
+                .tabItem {
+                    Label("Orders", systemImage: "shippingbox")
+                }
         }
     }
 }
