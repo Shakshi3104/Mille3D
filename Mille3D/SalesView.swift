@@ -8,8 +8,42 @@
 import SwiftUI
 
 struct SalesView: View {
+    @State private var isPresented = false
+    @State private var selectedCategory = "Clothes"
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            Text("Sales")
+                .ornament(attachmentAnchor: .scene(alignment: .top)) {
+                    HStack {
+                        Button {
+                            //
+                            isPresented.toggle()
+                            selectedCategory = "Clothes"
+                        } label: {
+                            Image(systemName: "tshirt")
+                        }
+                        
+                        Button {
+                            //
+                            isPresented.toggle()
+                            selectedCategory = "Shoes"
+                        } label: {
+                            Image(systemName: "shoe.2")
+                        }
+                    }
+                }
+                .sheet(isPresented: $isPresented, content: {
+                    VStack {
+                        Text("\(selectedCategory) Sales")
+                            .font(.headline)
+                            .foregroundStyle(.secondary)
+                        ChartLayoutView()
+                            .padding()
+                    }
+                    .padding()
+                })
+        }
     }
 }
 
