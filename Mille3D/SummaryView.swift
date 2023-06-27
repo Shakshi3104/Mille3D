@@ -23,14 +23,35 @@ struct MeasureSummaryView: View {
     }
 }
 
+// MARK: -
+struct MeasureChartView: View {
+    var title: String
+    
+    var body: some View {
+        VStack {
+            Text(title)
+                .font(.headline)
+                .foregroundStyle(.secondary)
+            ChartLayoutView()
+                .padding()
+        }
+        .padding()
+        .frame(width: 300, height: 200)
+        .background(.regularMaterial, in: .rect(cornerRadius: 20))
+    }
+}
+
 // MARK: - SummaryView
 struct SummaryView: View {
+    @State private var isPresented = false
+    
     var body: some View {
         NavigationStack(root: {
             VStack(spacing: 64) {
                 HStack(spacing: 32) {
                     Button {
                         //
+                        isPresented.toggle()
                     } label: {
                         MeasureSummaryView(measureName: "Sales", measureValue: 2326534)
                             .padding()
@@ -57,6 +78,24 @@ struct SummaryView: View {
                 }
             }
             .navigationTitle("Dashboard")
+            .sheet(isPresented: $isPresented, content: {
+                NavigationStack {
+                    VStack(spacing: 32) {
+                        MeasureChartView(title: "Sales Change")
+                        MeasureChartView(title: "Sales per Category")
+                    }
+                    .toolbar {
+                        ToolbarItem(placement: .cancellationAction) {
+                            Button {
+                                isPresented.toggle()
+                            } label: {
+                                Label("Cancel", systemImage: "xmark")
+                            }
+
+                        }
+                    }
+                }
+            })
         })
     }
 }
