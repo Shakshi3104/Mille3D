@@ -14,8 +14,9 @@ struct SalesView: View {
     var body: some View {
         NavigationStack {
             Text("Sales")
-                .ornament(attachmentAnchor: .scene(alignment: .top)) {
-                    HStack {
+                .navigationTitle("Sales")
+                .toolbar(content: {
+                    ToolbarItem(placement: .bottomOrnament) {
                         Button {
                             //
                             isPresented.toggle()
@@ -23,7 +24,9 @@ struct SalesView: View {
                         } label: {
                             Image(systemName: "tshirt")
                         }
-                        
+                    }
+                    
+                    ToolbarItem(placement: .bottomOrnament) {
                         Button {
                             //
                             isPresented.toggle()
@@ -32,7 +35,7 @@ struct SalesView: View {
                             Image(systemName: "shoe.2")
                         }
                     }
-                }
+                })
                 .sheet(isPresented: $isPresented, content: {
                     VStack {
                         Text("\(selectedCategory) Sales")
@@ -42,6 +45,9 @@ struct SalesView: View {
                             .padding()
                     }
                     .padding()
+                    .onTapGesture {
+                        isPresented.toggle()
+                    }
                 })
         }
     }
