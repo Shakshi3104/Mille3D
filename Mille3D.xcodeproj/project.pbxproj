@@ -27,6 +27,10 @@
 		CE148A0B2A49B2F10029BF78 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		CE148A0D2A4AF1060029BF78 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		CE148A0F2A4AFF0C0029BF78 /* SalesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesView.swift; sourceTree = "<group>"; };
+		CE148A112A4B14420029BF78 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CE148A142A4B15850029BF78 /* mille-3d-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mille-3d-1.png"; sourceTree = "<group>"; };
+		CE148A162A4B15BA0029BF78 /* mille-3d-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mille-3d-2.png"; sourceTree = "<group>"; };
+		CE148A172A4B16890029BF78 /* mille-3d-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mille-3d-3.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,8 @@
 		CE1489ED2A49AA460029BF78 = {
 			isa = PBXGroup;
 			children = (
+				CE148A122A4B14FF0029BF78 /* materials */,
+				CE148A112A4B14420029BF78 /* README.md */,
 				CE1489F82A49AA460029BF78 /* Mille3D */,
 				CE1489F92A49AA460029BF78 /* Packages */,
 				CE1489F72A49AA460029BF78 /* Products */,
@@ -86,6 +92,16 @@
 				CE148A042A49AA470029BF78 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE148A122A4B14FF0029BF78 /* materials */ = {
+			isa = PBXGroup;
+			children = (
+				CE148A142A4B15850029BF78 /* mille-3d-1.png */,
+				CE148A162A4B15BA0029BF78 /* mille-3d-2.png */,
+				CE148A172A4B16890029BF78 /* mille-3d-3.png */,
+			);
+			path = materials;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
